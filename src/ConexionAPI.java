@@ -9,11 +9,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ConexionAPI {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        ConexionAPI conexionAPI = new ConexionAPI();
-        Moneda moneda = conexionAPI.conexion("MXN");
-        System.out.println(moneda);
-    }
 
     public Moneda conexion(String monedaInicial) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
@@ -24,11 +19,10 @@ public class ConexionAPI {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
         String json = response.body();
-        System.out.println(json);
 
         Gson gson = new GsonBuilder().create();
         ResponseDTO responseDTO = gson.fromJson(json, ResponseDTO.class);
-        //Se envian los datos del Json
+
 
         return new Moneda(
                 responseDTO.conversion_rates().MXN(),
