@@ -26,17 +26,6 @@ public class ConexionAPI {
         ResponseDTO responseDTO = gson.fromJson(json, ResponseDTO.class);
 
 
-        return new Moneda(
-                responseDTO.conversion_rates().MXN(),
-                responseDTO.conversion_rates().USD(),
-                responseDTO.conversion_rates().BWP(),
-                responseDTO.conversion_rates().DOP(),
-                responseDTO.conversion_rates().IQD(),
-                responseDTO.conversion_rates().UZS(),
-                responseDTO.conversion_rates().SOS(),
-                responseDTO.conversion_rates().RWF(),
-                responseDTO.conversion_rates().JPY(),
-                responseDTO.conversion_rates().BHD()
-        );
+        return new Moneda(responseDTO.conversion_rates());
     }
 }

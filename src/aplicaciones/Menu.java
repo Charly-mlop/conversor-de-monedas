@@ -101,6 +101,7 @@ public class Menu {
                 cantidad = texto.cantidadParaCambiar();
                 total = cantidad * moneda.getMxn();
                 System.out.println("Su cantidad de "+ cantidad + " " + monedaInicial + " es de >>>>>>" + total + " MXN Peso Mexicano ");
+                break;
             case 2:
                 cantidad = texto.cantidadParaCambiar();
                 total = cantidad * moneda.getUsd();
