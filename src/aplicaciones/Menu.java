@@ -1,4 +1,7 @@
+package aplicaciones;
+
 import Modelo.Moneda;
+import texto.Texto;
 
 import java.io.IOException;
 import java.util.Scanner;
