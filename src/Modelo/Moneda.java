@@ -3,16 +3,16 @@ package Modelo;
 import DTO.ConversionRatesDTO;
 
 public class Moneda {
-    private double mxn; //Peso Mexicano
-    private double usd; //Dolar Estadounidense
-    private double bwp; // Paula
-    private double dop; //Peso Dominicano
-    private double iqd; //Dinar Iraqui
-    private double uzs; //Som Uzbeko
-    private double sos; // Chelin Somali
-    private double rwf; //Franco Ruandes
-    private double jpy; //Yen Japones
-    private double bhd; //Dinar Bareini
+    private final double mxn; //Peso Mexicano
+    private final double usd; //Dolar Estadounidense
+    private final double bwp; // Paula
+    private final double dop; //Peso Dominicano
+    private final double iqd; //Dinar Iraqui
+    private final double uzs; //Som Uzbeko
+    private final double sos; // Chelin Somali
+    private final double rwf; //Franco Ruandes
+    private final double jpy; //Yen Japones
+    private final double bhd; //Dinar Bareini
 
     public Moneda(ConversionRatesDTO conversionRatesDTO) {
         this.mxn = conversionRatesDTO.MXN();
